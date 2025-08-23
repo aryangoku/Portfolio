@@ -1,0 +1,205 @@
+.hero-liveeditor-bg {
+  min-height: 100vh;
+  background: radial-gradient(circle at 70% 20%, #00fff930 0%, transparent 70%),
+              radial-gradient(circle at 18% 88%, #ff7fe677 0%, transparent 75%),
+              #15161e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.hero-liveeditor-container {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 54px;
+  max-width: 1250px;
+  width: 100vw;
+  margin: 0 auto;
+  padding: 112px 32px 38px 32px;
+}
+.hero-liveeditor-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.catchy-headline {
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  font-weight: 800;
+  line-height: 1.12;
+  margin-bottom: 18px;
+  color: #fff;
+}
+.animated-word {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%;
+  background: linear-gradient(90deg,#0fffd3,#fa7eaf,#5edffd,#e682fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+  will-change: opacity, transform;
+  transition: none;
+  pointer-events: none;
+}
+
+.animated-word-wrapper {
+  display: inline-block;
+  position: relative;
+  width: 8.5ch; /* keeps space for any word, adjust if longer words used */
+  height: 1em;
+  vertical-align: baseline;
+}
+.animated-word--out {
+  opacity: 0;
+  transform: translateY(32%);
+  z-index: 1;
+  transition: opacity 0.32s cubic-bezier(.5,.1,.55,1), transform 0.33s cubic-bezier(.5,.1,.55,1);
+}
+
+.animated-word--out.active {
+  opacity: 0;
+  transform: translateY(-32%);
+}
+
+/* Current word: animates in from below */
+.animated-word--in {
+  opacity: 1;
+  transform: translateY(0%);
+  z-index: 2;
+  transition: opacity 0.32s cubic-bezier(.5,.1,.55,1), transform 0.33s cubic-bezier(.5,.1,.55,1);
+}
+
+.animated-word--in.active {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+/* For perfect smoothness, hide overflow (optional) */
+.animated-word-wrapper {
+  overflow: hidden;
+}
+@keyframes fadeWord {
+  0% { filter: blur(10px); opacity: 0; transform: translateY(-8px);}
+  70% { filter: blur(1px); opacity: .8;}
+  100% { filter: blur(0); opacity: 1; transform: translateY(0);}
+}
+.unique-intro {
+  color: #cfd1e3;
+  font-size: 1.15rem;
+  margin-bottom: 22px;
+  margin-top: 3px;
+}
+.hero-liveeditor-btns {
+  display: flex;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+.btn-modern {
+  font-size: 1.09rem;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 700;
+  border: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.18s, transform 0.16s;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 8px;
+}
+.btn-primary {
+  background: linear-gradient(90deg,#15ecfc 30%,#fa4ed9 90%);
+  color: #17181a;
+}
+.btn-primary:hover {
+  background: linear-gradient(90deg,#14bce7 40%,#d64fee 100%);
+  color: #fff;
+  transform: scale(1.04) translateY(-2px);
+}
+.btn-outline {
+  background: transparent;
+  color: #15ecfc;
+  border: 2px solid #15ecfc;
+}
+.btn-outline:hover {
+  background: #15ecfc;
+  color: #17181a;
+  box-shadow: 0 0 12px #15ecfc77;
+}
+.hero-liveeditor-right {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.editor-panel {
+  width: 420px;
+  background: rgba(25, 27, 34, 0.97);
+  border-radius: 13px;
+  box-shadow: 0 2px 44px #00f5e911, 0 1.5px 30px #0008;
+  padding: 16px 13px 18px 13px;
+  min-height: 340px;
+}
+.editor-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 9px;
+}
+.editor-tab {
+  background: none;
+  border: none;
+  font-size: 1.07rem;
+  font-weight: 700;
+  color: #fff;
+  opacity: 0.68;
+  padding: 7px 18px;
+  border-radius: 9px 9px 0 0;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  outline: none;
+}
+.editor-tab.active {
+  background: #191b22;
+  color: #15ecfc;
+  opacity: 1;
+}
+.editor-area {
+  min-height: 110px;
+  background: #191b22;
+  border-radius: 7px;
+  margin-bottom: 9px;
+  box-shadow: 0 2px 9px #0fffd222;
+}
+.code-editor {
+  font-family: "Fira Mono", "Consolas", "monospace";
+  min-height: 88px;
+  border-radius: 7px;
+  background: #191b22;
+  color: #e8e9ef;
+}
+.editor-preview-title {
+  color: #15ecfc;
+  font-size: 1.04rem;
+  margin: 7px 0 0 6px;
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+.editor-iframe {
+  width: 100%;
+  height: 90px;
+  min-height: 46px;
+  background: #111216;
+  border-radius: 8px;
+  margin-top: 4px;
+  border: none;
+  box-shadow: 0 2px 7px #00f5e922;
+}
+@media (max-width: 900px) {
+  .hero-liveeditor-container {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    padding: 84px 8vw 20px 8vw;
+  }
+  .editor-panel {
+    width: 99vw;
+    max-width: 99vw;
+  }
+}

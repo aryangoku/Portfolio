@@ -1,0 +1,103 @@
+.about-section {
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 80px 0 60px 0;
+  display: flex;
+  justify-content: center;
+}
+.about-card {
+  display: flex;
+  background: rgba(32,36,60,0.93);
+  box-shadow: 0 4px 32px #15ecfc28;
+  border-radius: 25px;
+  max-width: 950px;
+  width: 92vw;
+  padding: 54px 40px;
+  align-items: center;
+  gap: 64px;
+}
+.about-left {
+  flex: 1 1 60%;
+}
+.about-gradient {
+  background: linear-gradient(90deg,#0fffd3,#fa7eaf,#5edffd,#e682fb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+.about-intro {
+  color: #d3e3e6;
+  margin: 22px 0 24px 0;
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+.about-quickfacts {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 22px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 32px;
+  color: #8befff;
+  font-size: 1.08rem;
+}
+.about-quickfacts li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.fact-btn {
+  background: linear-gradient(90deg,#15ecfc 30%,#fa4ed9 90%);
+  color: #222;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1.02rem;
+  padding: 7px 22px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: filter 0.18s;
+}
+.fact-btn:hover {
+  filter: brightness(1.12);
+}
+.about-funfact {
+  margin-top: 14px;
+  color: #fae8ff;
+  font-size: 1.08rem;
+  font-style: italic;
+  min-height: 28px;
+}
+.about-right {
+  flex: 1 1 38%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid transparent;
+  background: linear-gradient(120deg,#15ecfc,#fa7eaf,#e682fb);
+  background-origin: border-box;
+  box-shadow: 0 2px 24px #00f5e933;
+  transition: transform 0.23s;
+}
+.about-img:hover {
+  transform: scale(1.03) rotate(-3deg);
+}
+@media (max-width: 900px) {
+  .about-card {
+    flex-direction: column-reverse;
+    gap: 28px;
+    padding: 34px 5vw;
+  }
+  .about-img {
+    width: 160px;
+    height: 160px;
+  }
+}

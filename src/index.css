@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: radial-gradient(circle at 70% 20%, #00fff930 0%, transparent 70%),
+              radial-gradient(circle at 18% 88%, #ff7fe677 0%, transparent 75%),
+              #15161e;
+  margin: 0;
+}
+html, body {
+  overflow-x: hidden !important;
+  width: 100vw;
+  scrollbar-width: none;
+  margin:0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+html {
+  scroll-behavior: smooth;
+}
