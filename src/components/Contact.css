@@ -155,6 +155,7 @@ background: transparent !important;
   box-shadow: 0 1px 8px #0ff1ff15;
   border: 2px solid #22243a;
   color: #b3bad4;
+  
 }
 .social-link.linkedin:hover {
   background: #0077b5;
@@ -204,3 +205,31 @@ background: transparent !important;
     min-width: 0;
   }
 }
+
+.contact-avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 12px 0 20px 0;
+  border: 2px solid #15ecfc;
+  box-shadow: 0 0 12px #15ecfc55;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  margin: 14px 0;
+}
+
+.social-link {
+  font-size: 1.8rem;
+  color: #e5e7ef;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.social-link:hover {
+  color: #15ecfc;
+  transform: scale(1.15);
+}
+

@@ -1,136 +1,120 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
-import { motion } from "framer-motion";
 import "./Contact.css";
+
+const SERVICE_ID = "service_y8f891r";
+const TEMPLATE_ID = "template_kql2y6g";
+const PUBLIC_KEY = "oatySakN_yKgiUeWu";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [ok, setOk] = useState(false);
+  const [err, setErr] = useState("");
 
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
+  const onChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3500);
-    setForm({ name: "", email: "", message: "" });
+    setSending(true);
+    setErr("");
+    try {
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          from_name: form.name,
+          email: form.email,
+          message: form.message,
+        },
+        { publicKey: PUBLIC_KEY }
+      );
+      setOk(true);
+      setForm({ name: "", email: "", message: "" });
+      setTimeout(() => setOk(false), 4000);
+    } catch (e) {
+      setErr("Could not send. Please try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
-    <section className="contact-section">
-      <motion.h2
-        className="contact-title gradient-text"
-        initial={{ opacity: 0, y: 60 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ type: "spring", stiffness: 40 }}
-      >
-        Let’s Connect
-      </motion.h2>
-      <motion.p
-        className="contact-subtitle"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, type: "spring", stiffness: 30 }}
-      >
-        Have an opportunity, want to collaborate, or just want to say hi?  
+    <section className="contact-section" id = "contact">
+      <h2 className="contact-title gradient-text">Let’s Connect</h2>
+      <p className="contact-subtitle">
         Drop a message or connect with me on social media!
-      </motion.p>
-      <div className="contact-grid">
+      </p>
 
-        <motion.form
-          className="contact-form"
-          initial={{ opacity: 0, x: -60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.3, type: "spring", stiffness: 40 }}
-          onSubmit={handleSubmit}
-        >
+      <div className="contact-grid">
+        <form className="contact-form" onSubmit={onSubmit}>
           <label>
             Name
             <input
-              type="text"
               name="name"
+              type="text"
               required
-              autoComplete="off"
               value={form.name}
-              onChange={handleChange}
-              placeholder="Your Name"
+              onChange={onChange}
             />
           </label>
           <label>
             Email
             <input
-              type="email"
               name="email"
+              type="email"
               required
-              autoComplete="off"
               value={form.email}
-              onChange={handleChange}
-              placeholder="you@email.com"
+              onChange={onChange}
             />
           </label>
           <label>
             Message
             <textarea
               name="message"
-              required
               rows={4}
+              required
               value={form.message}
-              onChange={handleChange}
-              placeholder="Your message..."
+              onChange={onChange}
             />
           </label>
-          <motion.button
-            type="submit"
-            className="contact-submit"
-            whileHover={{ scale: 1.05, boxShadow: "0 2px 16px #0ff1ff55" }}
-            whileTap={{ scale: 0.97 }}
-          >
-            Send Message
-          </motion.button>
-          {submitted && (
-            <motion.div
-              className="contact-success"
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-            >
-              Thank you! I'll get back to you soon. 🚀
-            </motion.div>
-          )}
-        </motion.form>
-        <motion.div
-          className="contact-socials"
-          initial={{ opacity: 0, x: 60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.35, type: "spring", stiffness: 40 }}
-        >
+          <button type="submit" disabled={sending} className="contact-submit">
+            {sending ? "Sending..." : "Send Message"}
+          </button>
+          {ok && <div className="contact-success">Message sent successfully ✅</div>}
+          {err && <div className="contact-error">{err}</div>}
+        </form>
+
+        <div className="contact-socials">
           <h3>Find me online</h3>
+          <img
+            src="/avatar.jpg"
+            alt="Aryan Sadvelkar"
+            className="contact-avatar"
+          />
           <div className="social-icons">
             <a
               href="https://www.linkedin.com/in/aryan-sadvelkar-510555311/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noreferrer"
               className="social-link linkedin"
-              aria-label="LinkedIn"
             >
               <FaLinkedin />
             </a>
             <a
               href="https://www.instagram.com/aryan_s.16/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noreferrer"
               className="social-link instagram"
-              aria-label="Instagram"
             >
               <FaInstagram />
             </a>
             <a
               href="https://www.facebook.com/Aryan-Sadvelkar/"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noreferrer"
               className="social-link facebook"
-              aria-label="Facebook"
             >
               <FaFacebook />
             </a>
@@ -139,7 +123,7 @@ export default function Contact() {
             <span>Email:</span>
             <a href="mailto:asadvelk@syr.edu">asadvelk@syr.edu</a>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

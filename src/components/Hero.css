@@ -1,13 +1,12 @@
 .hero-liveeditor-bg {
   min-height: 100vh;
-  background: radial-gradient(circle at 70% 20%, #00fff930 0%, transparent 70%),
-              radial-gradient(circle at 18% 88%, #ff7fe677 0%, transparent 75%),
-              #15161e;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
+
 .hero-liveeditor-container {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
@@ -42,13 +41,13 @@
   transition: none;
   pointer-events: none;
 }
-
 .animated-word-wrapper {
   display: inline-block;
   position: relative;
-  width: 8.5ch; /* keeps space for any word, adjust if longer words used */
+  width: 8.5ch;
   height: 1em;
   vertical-align: baseline;
+  overflow: hidden;
 }
 .animated-word--out {
   opacity: 0;
@@ -56,28 +55,19 @@
   z-index: 1;
   transition: opacity 0.32s cubic-bezier(.5,.1,.55,1), transform 0.33s cubic-bezier(.5,.1,.55,1);
 }
-
 .animated-word--out.active {
   opacity: 0;
   transform: translateY(-32%);
 }
-
-/* Current word: animates in from below */
 .animated-word--in {
   opacity: 1;
   transform: translateY(0%);
   z-index: 2;
   transition: opacity 0.32s cubic-bezier(.5,.1,.55,1), transform 0.33s cubic-bezier(.5,.1,.55,1);
 }
-
 .animated-word--in.active {
   opacity: 1;
   transform: translateY(0%);
-}
-
-/* For perfect smoothness, hide overflow (optional) */
-.animated-word-wrapper {
-  overflow: hidden;
 }
 @keyframes fadeWord {
   0% { filter: blur(10px); opacity: 0; transform: translateY(-8px);}
@@ -169,7 +159,7 @@
   box-shadow: 0 2px 9px #0fffd222;
 }
 .code-editor {
-  font-family: "Fira Mono", "Consolas", "monospace";
+  font-family: "Fira Mono","Consolas","monospace";
   min-height: 88px;
   border-radius: 7px;
   background: #191b22;
@@ -193,13 +183,6 @@
   box-shadow: 0 2px 7px #00f5e922;
 }
 @media (max-width: 900px) {
-  .hero-liveeditor-container {
-    grid-template-columns: 1fr;
-    gap: 22px;
-    padding: 84px 8vw 20px 8vw;
-  }
-  .editor-panel {
-    width: 99vw;
-    max-width: 99vw;
-  }
+  .hero-liveeditor-container { grid-template-columns: 1fr; gap: 22px; padding: 84px 8vw 20px 8vw; }
+  .editor-panel { width: 99vw; max-width: 99vw; }
 }

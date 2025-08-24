@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import timelineData from "../data/timeline";
 import "./Experience.css";
 
-// Animation variants for each card
 const cardVariants = {
   hidden: { opacity: 0, y: 60, scale: 0.97 },
   visible: {
@@ -20,7 +19,7 @@ export default function EducationExperience() {
   };
 
   return (
-    <section className="timeline-outer">
+    <section className="timeline-outer" id = "experience">
       <div className="timeline-header">
         <h2 className="timeline-title gradient-text">Education & Experience</h2>
         <button className="resume-btn" onClick={handleDownload}>
