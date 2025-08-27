@@ -7,7 +7,6 @@ export const projects = [
         "ML models (Prophet, ARIMA, LSTM) predict peak posting times on Instagram, Twitter, and TikTok. Processed 400K+ data points with clustering and regression to reveal key engagement windows. Built with Streamlit for interactive data visualization.",
       image: "/images/golden-hour.jpg",
       tech: ["AI/ML", "Python", "Streamlit", "Data Science"],
-      github: "https://github.com/aryansadvelkar/golden-hour-engagement", 
     },
     {
       title: "NutrLensAI",
@@ -49,7 +48,6 @@ export const projects = [
         "Intelligent travel recommendation portal using K-Nearest Neighbors (KNN) algorithm in Python. Provides users with personalized travel suggestions based on preferences, reviews, and ratings.",
       image: "/projects/travel-recommendation.png",
       tech: ["Python", "KNN", "AI/ML"],
-      github: "https://github.com/aryansadvelkar/travel-recommendation-system",
     },
     
   ];

@@ -4,9 +4,9 @@ import { FaLinkedin, FaInstagram, FaFacebook } from "react-icons/fa";
 import "./Contact.css";
 import Reveal from "./Reveal";
 
-const SERVICE_ID = "your_service_id";
-const TEMPLATE_ID = "your_template_id";
-const PUBLIC_KEY = "your_public_key";
+const SERVICE_ID = "service_y8f891r";
+const TEMPLATE_ID = "template_kql2y6g";
+const PUBLIC_KEY = "oatySakN_yKgiUeWu";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
