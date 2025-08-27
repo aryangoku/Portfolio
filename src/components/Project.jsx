@@ -33,6 +33,11 @@ export default function Projects() {
                   <FaExternalLinkAlt /> <span>Demo</span>
                 </a>
               )}
+              {proj.publication && (
+                <a href={proj.publication} target="_blank" rel="noopener noreferrer">
+                  <FaExternalLinkAlt /> <span>Publication</span>
+                </a>
+              )}
             </div>
           </div>
         ))}

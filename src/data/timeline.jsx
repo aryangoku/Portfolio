@@ -3,7 +3,7 @@ const timelineData = [
   {
     type: "education",
     org: "Vidyalankar Inst. of Technology",
-    logo: "/vit-logo.png",
+    logo: "images/vidyalankar.png",
     title: "B.E. Information Technology",
     date: "Oct 2020 – May 2024",
     cgpa: "3.62",
@@ -17,7 +17,7 @@ const timelineData = [
   {
     type: "experience",
     org: "ACMEGRADE",
-    logo: "/acmegrade-logo.png",
+    logo: "/images/acmegrade.png",
     title: "Full Stack Dev Trainee",
     date: "Jan 2023 – Feb 2023",
     highlights: [
@@ -29,7 +29,7 @@ const timelineData = [
   {
     type: "education",
     org: "Syracuse University",
-    logo: "/syracuse-logo.png",
+    logo: "images/syracuse.png",
     title: "Masters in Computer Science",
     date: "Aug 2024 – May 2026",
     cgpa: "3.44",

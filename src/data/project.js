@@ -24,6 +24,7 @@ export const projects = [
       image: "/projects/apartments-students.png",
       tech: ["React", "Node.js", "Express", "MongoDB", "MERN"],
       github: "https://github.com/aryangoku/Apartment-for-Students",
+      publication: "https://www.ijfmr.com/research-paper.php?id=19547",
     },
     {
       title: "Online Job Portal",
