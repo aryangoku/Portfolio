@@ -20,24 +20,17 @@ export const projects = [
       title: "Buddies",
       description:
         "MERN-stack web app helping students and professionals find suitable accommodation. Features interest-based search, prior resident info, and community-based recommendations for smarter decisions.",
-      image: "/projects/apartments-students.png",
+      image: "/images/housing.jpg",
       tech: ["React", "Node.js", "Express", "MongoDB", "MERN"],
       github: "https://github.com/aryangoku/Apartment-for-Students",
       publication: "https://www.ijfmr.com/research-paper.php?id=19547",
     },
-    {
-      title: "Online Job Portal",
-      description:
-        "Job portal connecting freshers and recruiters. Features resume posting, job search for candidates, and job management for companies. Robust backend and simple frontend for efficient workflow.",
-      image: "/projects/job-portal.png",
-      tech: ["PHP", "MySQL", "HTML", "CSS", "JavaScript"],
-      github: "https://github.com/aryangoku/job_portal",
-    },
+
     {
       title: "Slither Game",
       description:
         "This is a snake game build using Javascript, CSS, HTML",
-      image: "/projects/airline-reservation.png",
+      image: "/images/snake.png",
       tech: ["Javascript", "HTML", "CSS"],
       github: "https://github.com/aryangoku/Silther-Game",
       demo: "https://silther-game.vercel.app/"
@@ -46,7 +39,7 @@ export const projects = [
       title: "Travel Recommendation System",
       description:
         "Intelligent travel recommendation portal using K-Nearest Neighbors (KNN) algorithm in Python. Provides users with personalized travel suggestions based on preferences, reviews, and ratings.",
-      image: "/projects/travel-recommendation.png",
+      image: "/images/travel.jpg",
       tech: ["Python", "KNN", "AI/ML"],
     },
     

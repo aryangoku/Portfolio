@@ -32,12 +32,28 @@ const timelineData = [
     logo: "images/syracuse.png",
     title: "Masters in Computer Science",
     date: "Aug 2024 – May 2026",
-    cgpa: "3.44",
+    cgpa: "3.75",
     highlights: [
       "Developed an AI-powered Nutrient Analysis system leveraging OCR and NLP for automated food label recognition and diet recommendations.",
       "Learned and applied Haskell for advanced problem-solving and functional programming concepts.",
       "Built a strong foundation in Operating Systems, concurrency, and systems programming.",
       "Hands-on experience with modern AI/ML tools: PyTorch, Hugging Face, and more."
+    ]
+  },
+  {
+    type: "experience",
+    org: "iConsult Collaborative",
+    logo: "/images/iConsult.jpg",
+    title: "Software Developer Intern",
+    date: "October 2025 – Feb 2026",
+    highlights: [
+      "Owned and delivered end-to-end features for a production SaaS platform",
+      "Built scalable REST APIs using Node.js and Express in a multi-tenant system",
+      "Implemented JWT authentication and RBAC for secure access control",
+      "Integrated Stripe subscriptions and webhooks for automated billing",
+      "Containerized services with Docker and supported CI/CD deployments",
+      "Participated in code reviews, refactoring, and Agile collaboration",
+      "Debugged and resolved production issues to ensure system reliability"
     ]
   }
 ];

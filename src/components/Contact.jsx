@@ -100,7 +100,7 @@ export default function Contact() {
             <h3 className="profile-title">Find me online</h3>
 
             <div className="avatar-ring">
-              <img src="/avatar.jpg" alt="Aryan Sadvelkar" />
+              <img src="/images/aryan.jpg.jpg" alt="Aryan Sadvelkar" />
             </div>
 
             <div className="profile-bio">
