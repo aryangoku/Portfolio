@@ -15,7 +15,7 @@ const cardVariants = {
 
 export default function EducationExperience() {
   const handleDownload = () => {
-    window.open("./resume/Aryan Sadvelkar_AIML_Resume.pdf", "_blank");
+    window.open("./resume/Aryan Sadvelkar_Resume.pdf", "_blank");
   };
 
   return (
