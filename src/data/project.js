@@ -2,6 +2,13 @@
 
 export const projects = [
     {
+      title: "CodePulse",
+      description:
+        "AI-powered code analyzer for GitHub repositories. Paste a repo URL to get health scores, commit heatmaps, contributor stats, dependency graphs, and AI architecture review.",
+      tech: ["AI/ML", "Python", "FastAPI", "React"],
+      github : "https://github.com/aryangoku/Ai_Code_analyzer"
+    },
+    {
       title: "Predicting the Golden Hour for Social Media Engagement",
       description:
         "ML models (Prophet, ARIMA, LSTM) predict peak posting times on Instagram, Twitter, and TikTok. Processed 400K+ data points with clustering and regression to reveal key engagement windows. Built with Streamlit for interactive data visualization.",
