@@ -6,7 +6,9 @@ export const projects = [
       description:
         "AI-powered code analyzer for GitHub repositories. Paste a repo URL to get health scores, commit heatmaps, contributor stats, dependency graphs, and AI architecture review.",
       tech: ["AI/ML", "Python", "FastAPI", "React"],
-      github : "https://github.com/aryangoku/Ai_Code_analyzer"
+      image : "/images/codepulse.png/",
+      github : "https://github.com/aryangoku/Ai_Code_analyzer",
+      demo : "https://codepulse-aryan.vercel.app/"
     },
     {
       title: "Predicting the Golden Hour for Social Media Engagement",
