@@ -25,4 +25,5 @@ The application is built with React and bundled using Vite for fast development 
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/aryangoku/Portfolio.git
+
