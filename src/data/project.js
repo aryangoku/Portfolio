@@ -6,7 +6,7 @@ export const projects = [
       description:
         "Verifiable multi-agent ML pipeline system that uses LangGraph, ReAct agents, and Groq/Llama 3.3 to build, verify, and self-heal tabular ML pipelines with leakage detection, overfitting checks, feature engineering, and model cards.",
       tech: ["Python", "Streamlit", "LangGraph", "Groq API", "scikit-learn"],
-      image: "/images/verif-AIML.png",
+      image: "/images/Verif-AIML.png",
       github: "https://github.com/aryangoku/Verif-AIML",
       demo: "https://verif-aiml.streamlit.app/",
     },
